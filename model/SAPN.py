@@ -18,7 +18,6 @@ class SelfAttention(nn.Module):
         K = self.key(x)    # 计算键向量
         V = self.value(x)  # 计算值向量
 
-        # 注意力权重
         scores = torch.matmul(Q, K.transpose(-2, -1)) * self.scale  # 计算注意力分数并缩放
         attn_weights = F.softmax(scores, dim=-1)  # 对注意力分数应用 softmax 函数
 
