@@ -1,0 +1,57 @@
+DGCNN(
+  (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (bn3): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (bn4): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (bn5): BatchNorm1d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (conv1): Sequential(
+    (0): Conv2d(6, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+    (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): LeakyReLU(negative_slope=0.2)
+  )
+  (conv2): Sequential(
+    (0): Conv2d(128, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+    (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): LeakyReLU(negative_slope=0.2)
+  )
+  (conv3): Sequential(
+    (0): Conv2d(128, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+    (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): LeakyReLU(negative_slope=0.2)
+  )
+  (conv4): Sequential(
+    (0): Conv2d(256, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+    (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): LeakyReLU(negative_slope=0.2)
+  )
+  (conv5): Sequential(
+    (0): Conv1d(512, 1024, kernel_size=(1,), stride=(1,), bias=False)
+    (1): BatchNorm1d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): LeakyReLU(negative_slope=0.2)
+  )
+  (linear1): Linear(in_features=2048, out_features=512, bias=False)
+  (bn6): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (dp1): Dropout(p=0.5, inplace=False)
+  (linear2): Linear(in_features=512, out_features=256, bias=True)
+  (bn7): BatchNorm1d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (dp2): Dropout(p=0.5, inplace=False)
+  (linear3): Linear(in_features=256, out_features=40, bias=True)
+)
+Train: 0, time: 41.444653, loss: 2.638983, train acc: 0.464219, train avg acc: 0.293932
+Validation: 0, time: 41.444653, loss: 2.033734, validation acc: 0.713976, validation avg acc: 0.536181
+Train: 1, time: 41.949565, loss: 2.162871, train acc: 0.652881, train avg acc: 0.488383
+Validation: 1, time: 41.949565, loss: 1.848255, validation acc: 0.778440, validation avg acc: 0.623327
+Train: 2, time: 42.135881, loss: 2.013162, train acc: 0.724094, train avg acc: 0.579586
+Validation: 2, time: 42.135881, loss: 1.782844, validation acc: 0.825027, validation avg acc: 0.710973
+Train: 3, time: 41.594658, loss: 1.942441, train acc: 0.751975, train avg acc: 0.617901
+Validation: 3, time: 41.594658, loss: 1.724038, validation acc: 0.837486, validation avg acc: 0.720411
+Train: 4, time: 42.094158, loss: 1.890091, train acc: 0.777765, train avg acc: 0.657980
+Validation: 4, time: 42.094158, loss: 1.677524, validation acc: 0.861322, validation avg acc: 0.785167
+Train: 5, time: 42.037182, loss: 1.840633, train acc: 0.796120, train avg acc: 0.684227
+Validation: 5, time: 42.037182, loss: 1.647540, validation acc: 0.862947, validation avg acc: 0.774052
+Train: 6, time: 41.842500, loss: 1.814036, train acc: 0.805878, train avg acc: 0.699199
+Validation: 6, time: 41.842500, loss: 1.649730, validation acc: 0.874323, validation avg acc: 0.787213
+Train: 7, time: 42.040112, loss: 1.783929, train acc: 0.819238, train avg acc: 0.718468
+Validation: 7, time: 42.040112, loss: 1.630201, validation acc: 0.869989, validation avg acc: 0.797647
+Train: 8, time: 42.207968, loss: 1.762123, train acc: 0.833062, train avg acc: 0.742392
+Validation: 8, time: 42.207968, loss: 1.582644, validation acc: 0.891116, validation avg acc: 0.816741

@@ -1,0 +1,2 @@
+execution_id,model,dataset,batch_size,test_batch_size,epochs,att_heads,optimizer,learning_rate,momentum,num_points,dropout,emb_dims,k,loss,validation_acc,validation_avg_acc
+execution_0003,ImprovedMADGCNN,ModelNet40,32,16,100,8,SGD,0.0125,1024,0.5,0.9,1024,1,1.611222230083635,0.8586132177681474,0.7810616694740231

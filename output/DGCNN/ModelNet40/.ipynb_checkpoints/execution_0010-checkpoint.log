@@ -1,0 +1,161 @@
+DGCNN(
+  (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (bn3): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (bn4): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (bn5): BatchNorm1d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (conv1): Sequential(
+    (0): Conv2d(6, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+    (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): LeakyReLU(negative_slope=0.2)
+  )
+  (conv2): Sequential(
+    (0): Conv2d(128, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+    (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): LeakyReLU(negative_slope=0.2)
+  )
+  (conv3): Sequential(
+    (0): Conv2d(128, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+    (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): LeakyReLU(negative_slope=0.2)
+  )
+  (conv4): Sequential(
+    (0): Conv2d(256, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+    (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): LeakyReLU(negative_slope=0.2)
+  )
+  (conv5): Sequential(
+    (0): Conv1d(512, 1024, kernel_size=(1,), stride=(1,), bias=False)
+    (1): BatchNorm1d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): LeakyReLU(negative_slope=0.2)
+  )
+  (linear1): Linear(in_features=2048, out_features=512, bias=False)
+  (bn6): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (dp1): Dropout(p=0.5, inplace=False)
+  (linear2): Linear(in_features=512, out_features=256, bias=True)
+  (bn7): BatchNorm1d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (dp2): Dropout(p=0.5, inplace=False)
+  (linear3): Linear(in_features=256, out_features=40, bias=True)
+)
+Train: 0, time: 20.958964, loss: 2.724184, train acc: 0.422746, train avg acc: 0.267142
+Validation: 0, time: 20.958964, loss: 2.149510, validation acc: 0.675515, validation avg acc: 0.502081
+Train: 1, time: 20.889447, loss: 2.335279, train acc: 0.578183, train avg acc: 0.411726
+Validation: 1, time: 20.889447, loss: 2.007606, validation acc: 0.700433, validation avg acc: 0.539871
+Train: 2, time: 20.799246, loss: 2.221726, train acc: 0.623954, train avg acc: 0.460810
+Validation: 2, time: 20.799246, loss: 1.995996, validation acc: 0.717226, validation avg acc: 0.551720
+Train: 3, time: 20.763326, loss: 2.123623, train acc: 0.666705, train avg acc: 0.510713
+Validation: 3, time: 20.763326, loss: 2.002824, validation acc: 0.739978, validation avg acc: 0.603069
+Train: 4, time: 20.702636, loss: 2.081243, train acc: 0.685874, train avg acc: 0.531425
+Validation: 4, time: 20.702636, loss: 1.903677, validation acc: 0.754063, validation avg acc: 0.607157
+Train: 5, time: 20.967424, loss: 2.033923, train acc: 0.711896, train avg acc: 0.564893
+Validation: 5, time: 20.967424, loss: 1.775554, validation acc: 0.809317, validation avg acc: 0.681360
+Train: 6, time: 20.836961, loss: 2.005004, train acc: 0.722119, train avg acc: 0.582981
+Validation: 6, time: 20.836961, loss: 1.806516, validation acc: 0.803359, validation avg acc: 0.666716
+Train: 7, time: 20.984179, loss: 1.967831, train acc: 0.738964, train avg acc: 0.605776
+Validation: 7, time: 20.984179, loss: 1.749816, validation acc: 0.813109, validation avg acc: 0.685363
+Train: 8, time: 21.058271, loss: 1.945432, train acc: 0.743727, train avg acc: 0.611864
+Validation: 8, time: 21.058271, loss: 1.748640, validation acc: 0.833694, validation avg acc: 0.719563
+Train: 9, time: 20.743067, loss: 1.915643, train acc: 0.763243, train avg acc: 0.635766
+Validation: 9, time: 20.743067, loss: 1.682592, validation acc: 0.854821, validation avg acc: 0.746965
+Train: 10, time: 21.002476, loss: 1.895649, train acc: 0.767658, train avg acc: 0.639257
+Validation: 10, time: 21.002476, loss: 1.715599, validation acc: 0.845070, validation avg acc: 0.733409
+Train: 11, time: 20.867796, loss: 1.878940, train acc: 0.776371, train avg acc: 0.657343
+Validation: 11, time: 20.867796, loss: 1.732171, validation acc: 0.838570, validation avg acc: 0.733448
+Train: 12, time: 20.972246, loss: 1.866939, train acc: 0.780901, train avg acc: 0.662110
+Validation: 12, time: 20.972246, loss: 1.688475, validation acc: 0.855363, validation avg acc: 0.761643
+Train: 13, time: 21.142044, loss: 1.841530, train acc: 0.793448, train avg acc: 0.677234
+Validation: 13, time: 21.142044, loss: 1.663369, validation acc: 0.862947, validation avg acc: 0.772726
+Train: 14, time: 20.866746, loss: 1.837655, train acc: 0.798211, train avg acc: 0.688484
+Validation: 14, time: 20.866746, loss: 1.654347, validation acc: 0.861863, validation avg acc: 0.768258
+Train: 15, time: 20.712089, loss: 1.826356, train acc: 0.796120, train avg acc: 0.689158
+Validation: 15, time: 20.712089, loss: 1.651550, validation acc: 0.859155, validation avg acc: 0.778872
+Train: 16, time: 20.818150, loss: 1.816543, train acc: 0.802974, train avg acc: 0.694507
+Validation: 16, time: 20.818150, loss: 1.633608, validation acc: 0.873781, validation avg acc: 0.786014
+Train: 17, time: 21.277003, loss: 1.794577, train acc: 0.813546, train avg acc: 0.716869
+Validation: 17, time: 21.277003, loss: 1.620461, validation acc: 0.875948, validation avg acc: 0.795246
+Train: 18, time: 21.087660, loss: 1.788448, train acc: 0.815637, train avg acc: 0.713331
+Validation: 18, time: 21.087660, loss: 1.653303, validation acc: 0.869989, validation avg acc: 0.798826
+Train: 19, time: 20.669195, loss: 1.783420, train acc: 0.816101, train avg acc: 0.715692
+Validation: 19, time: 20.669195, loss: 1.605791, validation acc: 0.874865, validation avg acc: 0.796619
+Train: 20, time: 20.865499, loss: 1.772566, train acc: 0.821097, train avg acc: 0.722745
+Validation: 20, time: 20.865499, loss: 1.608774, validation acc: 0.876490, validation avg acc: 0.795159
+Train: 21, time: 20.740519, loss: 1.763467, train acc: 0.825395, train avg acc: 0.731947
+Validation: 21, time: 20.740519, loss: 1.627501, validation acc: 0.875406, validation avg acc: 0.797009
+Train: 22, time: 20.856308, loss: 1.756432, train acc: 0.826789, train avg acc: 0.728847
+Validation: 22, time: 20.856308, loss: 1.606446, validation acc: 0.880282, validation avg acc: 0.799898
+Train: 23, time: 20.783665, loss: 1.747667, train acc: 0.829577, train avg acc: 0.738267
+Validation: 23, time: 20.783665, loss: 1.599861, validation acc: 0.878115, validation avg acc: 0.794388
+Train: 24, time: 20.750734, loss: 1.737125, train acc: 0.837244, train avg acc: 0.749991
+Validation: 24, time: 20.750734, loss: 1.586337, validation acc: 0.881907, validation avg acc: 0.812682
+Train: 25, time: 20.844767, loss: 1.741727, train acc: 0.834689, train avg acc: 0.743295
+Validation: 25, time: 20.844767, loss: 1.586064, validation acc: 0.881907, validation avg acc: 0.809168
+Train: 26, time: 20.837428, loss: 1.733495, train acc: 0.839103, train avg acc: 0.746439
+Validation: 26, time: 20.837428, loss: 1.588520, validation acc: 0.886241, validation avg acc: 0.813094
+Train: 27, time: 20.922871, loss: 1.727124, train acc: 0.843053, train avg acc: 0.756088
+Validation: 27, time: 20.922871, loss: 1.586316, validation acc: 0.892199, validation avg acc: 0.834173
+Train: 28, time: 20.759984, loss: 1.712821, train acc: 0.845493, train avg acc: 0.760706
+Validation: 28, time: 20.759984, loss: 1.585560, validation acc: 0.886241, validation avg acc: 0.817321
+Train: 29, time: 20.782467, loss: 1.715936, train acc: 0.846422, train avg acc: 0.758256
+Validation: 29, time: 20.782467, loss: 1.584419, validation acc: 0.894366, validation avg acc: 0.838915
+Train: 30, time: 20.891531, loss: 1.718038, train acc: 0.844099, train avg acc: 0.754158
+Validation: 30, time: 20.891531, loss: 1.579939, validation acc: 0.892199, validation avg acc: 0.820407
+Train: 31, time: 20.780796, loss: 1.709641, train acc: 0.848048, train avg acc: 0.760656
+Validation: 31, time: 20.780796, loss: 1.598173, validation acc: 0.890033, validation avg acc: 0.830511
+Train: 32, time: 20.954817, loss: 1.705694, train acc: 0.844796, train avg acc: 0.754819
+Validation: 32, time: 20.954817, loss: 1.551373, validation acc: 0.898700, validation avg acc: 0.835035
+Train: 33, time: 20.963116, loss: 1.694481, train acc: 0.857342, train avg acc: 0.776660
+Validation: 33, time: 20.963116, loss: 1.556014, validation acc: 0.898158, validation avg acc: 0.847433
+Train: 34, time: 20.829845, loss: 1.697406, train acc: 0.853044, train avg acc: 0.771040
+Validation: 34, time: 20.829845, loss: 1.565445, validation acc: 0.884615, validation avg acc: 0.818309
+Train: 35, time: 20.958547, loss: 1.695653, train acc: 0.852347, train avg acc: 0.768011
+Validation: 35, time: 20.958547, loss: 1.554833, validation acc: 0.897075, validation avg acc: 0.849128
+Train: 36, time: 20.602376, loss: 1.688430, train acc: 0.856064, train avg acc: 0.770344
+Validation: 36, time: 20.602376, loss: 1.551286, validation acc: 0.886241, validation avg acc: 0.816499
+Train: 37, time: 21.083951, loss: 1.683188, train acc: 0.858736, train avg acc: 0.778327
+Validation: 37, time: 21.083951, loss: 1.574127, validation acc: 0.890574, validation avg acc: 0.838838
+Train: 38, time: 20.907358, loss: 1.681460, train acc: 0.857923, train avg acc: 0.778145
+Validation: 38, time: 20.907358, loss: 1.550481, validation acc: 0.897616, validation avg acc: 0.837890
+Train: 39, time: 21.162636, loss: 1.675228, train acc: 0.860130, train avg acc: 0.781954
+Validation: 39, time: 21.162636, loss: 1.554476, validation acc: 0.895991, validation avg acc: 0.834166
+Train: 40, time: 20.928032, loss: 1.671010, train acc: 0.861989, train avg acc: 0.785213
+Validation: 40, time: 20.928032, loss: 1.532455, validation acc: 0.908992, validation avg acc: 0.857347
+Train: 41, time: 20.887756, loss: 1.671660, train acc: 0.861292, train avg acc: 0.784357
+Validation: 41, time: 20.887756, loss: 1.577811, validation acc: 0.889491, validation avg acc: 0.818782
+Train: 42, time: 20.960122, loss: 1.672288, train acc: 0.866984, train avg acc: 0.795125
+Validation: 42, time: 20.960122, loss: 1.550987, validation acc: 0.896533, validation avg acc: 0.851787
+Train: 43, time: 21.000574, loss: 1.663675, train acc: 0.863615, train avg acc: 0.789303
+Validation: 43, time: 21.000574, loss: 1.536583, validation acc: 0.903034, validation avg acc: 0.851309
+Train: 44, time: 20.898653, loss: 1.657850, train acc: 0.866868, train avg acc: 0.793428
+Validation: 44, time: 20.898653, loss: 1.534057, validation acc: 0.900325, validation avg acc: 0.842389
+Train: 45, time: 21.189868, loss: 1.658865, train acc: 0.868843, train avg acc: 0.792663
+Validation: 45, time: 21.189868, loss: 1.544122, validation acc: 0.905200, validation avg acc: 0.855606
+Train: 46, time: 21.031679, loss: 1.649782, train acc: 0.870237, train avg acc: 0.794629
+Validation: 46, time: 21.031679, loss: 1.531004, validation acc: 0.907909, validation avg acc: 0.852260
+Train: 47, time: 21.370949, loss: 1.653601, train acc: 0.868030, train avg acc: 0.791824
+Validation: 47, time: 21.370949, loss: 1.554639, validation acc: 0.894908, validation avg acc: 0.829335
+Train: 48, time: 20.784036, loss: 1.651062, train acc: 0.868494, train avg acc: 0.796257
+Validation: 48, time: 20.784036, loss: 1.531573, validation acc: 0.900867, validation avg acc: 0.837425
+Train: 49, time: 20.667797, loss: 1.653864, train acc: 0.869888, train avg acc: 0.798093
+Validation: 49, time: 20.667797, loss: 1.535751, validation acc: 0.900325, validation avg acc: 0.853954
+Train: 50, time: 20.683044, loss: 1.647952, train acc: 0.871980, train avg acc: 0.799966
+Validation: 50, time: 20.683044, loss: 1.521262, validation acc: 0.909534, validation avg acc: 0.863041
+Train: 51, time: 20.845286, loss: 1.636012, train acc: 0.875813, train avg acc: 0.808034
+Validation: 51, time: 20.845286, loss: 1.528469, validation acc: 0.900867, validation avg acc: 0.841284
+Train: 52, time: 21.067759, loss: 1.647589, train acc: 0.872793, train avg acc: 0.801313
+Validation: 52, time: 21.067759, loss: 1.518679, validation acc: 0.904659, validation avg acc: 0.845991
+Train: 53, time: 20.772082, loss: 1.639458, train acc: 0.874071, train avg acc: 0.801476
+Validation: 53, time: 20.772082, loss: 1.521584, validation acc: 0.902492, validation avg acc: 0.842170
+Train: 54, time: 20.713222, loss: 1.636471, train acc: 0.876046, train avg acc: 0.806163
+Validation: 54, time: 20.713222, loss: 1.518466, validation acc: 0.909534, validation avg acc: 0.862589
+Train: 55, time: 20.872509, loss: 1.638031, train acc: 0.872560, train avg acc: 0.800983
+Validation: 55, time: 20.872509, loss: 1.517487, validation acc: 0.903575, validation avg acc: 0.842246
+Train: 56, time: 21.020476, loss: 1.630054, train acc: 0.881157, train avg acc: 0.813282
+Validation: 56, time: 21.020476, loss: 1.522848, validation acc: 0.901950, validation avg acc: 0.841852
+Train: 57, time: 21.121579, loss: 1.636873, train acc: 0.873954, train avg acc: 0.802069
+Validation: 57, time: 21.121579, loss: 1.508886, validation acc: 0.912243, validation avg acc: 0.859064
+Train: 58, time: 21.097315, loss: 1.629814, train acc: 0.878369, train avg acc: 0.807626
+Validation: 58, time: 21.097315, loss: 1.515258, validation acc: 0.907367, validation avg acc: 0.849888
+Train: 59, time: 21.005435, loss: 1.621472, train acc: 0.882086, train avg acc: 0.815557
+Validation: 59, time: 21.005435, loss: 1.509042, validation acc: 0.910076, validation avg acc: 0.860179
+====================================================================
+TEST:: test acc: 0.910666, test avg acc: 0.859377

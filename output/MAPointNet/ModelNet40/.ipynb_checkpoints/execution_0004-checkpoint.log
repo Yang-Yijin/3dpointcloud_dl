@@ -1,0 +1,39 @@
+MAPointNet(
+  (attn1): MultiheadAttention(
+    (out_proj): NonDynamicallyQuantizableLinear(in_features=64, out_features=64, bias=True)
+  )
+  (attn2): MultiheadAttention(
+    (out_proj): NonDynamicallyQuantizableLinear(in_features=64, out_features=64, bias=True)
+  )
+  (attn3): MultiheadAttention(
+    (out_proj): NonDynamicallyQuantizableLinear(in_features=128, out_features=128, bias=True)
+  )
+  (conv1): Conv1d(3, 64, kernel_size=(1,), stride=(1,), bias=False)
+  (conv2): Conv1d(64, 64, kernel_size=(1,), stride=(1,), bias=False)
+  (conv3): Conv1d(64, 64, kernel_size=(1,), stride=(1,), bias=False)
+  (conv4): Conv1d(64, 128, kernel_size=(1,), stride=(1,), bias=False)
+  (conv5): Conv1d(128, 1024, kernel_size=(1,), stride=(1,), bias=False)
+  (bn1): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (bn2): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (bn3): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (bn4): BatchNorm1d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (bn5): BatchNorm1d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (linear1): Linear(in_features=1024, out_features=512, bias=False)
+  (bn6): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (dp1): Dropout(p=0.5, inplace=False)
+  (linear2): Linear(in_features=512, out_features=40, bias=True)
+)
+Train: 0, time: 8.943012, loss: 2.917174, train acc: 0.361989, train avg acc: 0.203021
+Validation: 0, time: 8.943012, loss: 2.378428, validation acc: 0.539003, validation avg acc: 0.324125
+Train: 1, time: 9.298039, loss: 2.466335, train acc: 0.529043, train avg acc: 0.352922
+Validation: 1, time: 9.298039, loss: 2.187266, validation acc: 0.634345, validation avg acc: 0.446721
+Train: 2, time: 9.431863, loss: 2.312705, train acc: 0.589219, train avg acc: 0.418086
+Validation: 2, time: 9.431863, loss: 2.024233, validation acc: 0.714518, validation avg acc: 0.538823
+Train: 3, time: 9.145750, loss: 2.224264, train acc: 0.624535, train avg acc: 0.466679
+Validation: 3, time: 9.145750, loss: 1.946961, validation acc: 0.741062, validation avg acc: 0.575267
+Train: 4, time: 9.017032, loss: 2.161969, train acc: 0.644284, train avg acc: 0.487073
+Validation: 4, time: 9.017032, loss: 1.918442, validation acc: 0.739978, validation avg acc: 0.585494
+Train: 5, time: 9.000793, loss: 2.114602, train acc: 0.671004, train avg acc: 0.523400
+Validation: 5, time: 9.000793, loss: 1.863999, validation acc: 0.771939, validation avg acc: 0.638992
+Train: 6, time: 9.004818, loss: 2.078300, train acc: 0.687035, train avg acc: 0.541129
+Validation: 6, time: 9.004818, loss: 1.837277, validation acc: 0.775190, validation avg acc: 0.631798

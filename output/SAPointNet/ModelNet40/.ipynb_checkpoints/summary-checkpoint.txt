@@ -1,0 +1,4 @@
+execution_id,model,dataset,batch_size,test_batch_size,epochs,att_heads,optimizer,learning_rate,momentum,num_points,dropout,emb_dims,k,loss,validation_acc,validation_avg_acc
+execution_0001,SAPointNet,ModelNet40,32,16,120,8,ADAM,0.0001,1024,0.5,0.9,1024,20,1.4846832225278812,0.919284940411701,0.8810393731199644
+execution_0002,SAPointNet,ModelNet40,32,16,300,8,ADAM,0.0001,1024,0.5,0.9,1024,20,1.4694359119121845,0.9236186348862405,0.8862880317677737
+execution_0003,SAPointNet,ModelNet40,32,16,300,4,ADAM,0.0001,1024,0.5,0.9,1024,20,1.5894640631174601,0.886240520043337,0.8600227621515962
